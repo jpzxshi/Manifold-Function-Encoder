@@ -15,7 +15,7 @@ class Poisson_varying_domains_data(ln.data.Data_MIONet_Cartesian):
         # y_train:[train_num, num_loc]
         self.y_train = np.load(path + 'y_train.npy')
         # X_test:([test_num, dim_zomega], [test_num, dim_zf], [test_num, num_loc, dim_loc])
-        test_num_half = 100 # If an out-of-memory error occurs, the amount of test data can be reduced,
+        test_num_half = 100 # If an out-of-memory error occurs, the amount of test data can be reduced
         test_range = [X_test['zomega'].shape[0] // 2 - test_num_half, 
                       X_test['zomega'].shape[0] // 2 + test_num_half]
         self.X_test = (X_test['zomega'][test_range[0]:test_range[1]], 
